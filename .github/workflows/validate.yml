@@ -1,0 +1,15 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Structural lint
+        # The server-repo tool check skips here by design — see skills/flow/.lint.sh.
+        run: skills/flow/.lint.sh

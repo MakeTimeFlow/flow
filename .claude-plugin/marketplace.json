@@ -1,0 +1,15 @@
+{
+  "name": "maketimeflow",
+  "description": "Official MakeTimeFlow plugins for Claude — bring your real tasks, calendar, and success stories into the conversation.",
+  "owner": {
+    "name": "MakeTimeFlow",
+    "url": "https://maketimeflow.com"
+  },
+  "plugins": [
+    {
+      "name": "flow",
+      "source": "./",
+      "description": "Plan your day and run the weekly WRAP the MakeTimeFlow way — Aligned Action horizons, tasks, timers, and honest capacity, live in MakeTimeFlow."
+    }
+  ]
+}

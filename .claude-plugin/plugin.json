@@ -1,0 +1,19 @@
+{
+  "name": "flow",
+  "description": "Plan your day and run the weekly WRAP the MakeTimeFlow way — Aligned Action horizons, tasks, timers, and honest capacity, live in MakeTimeFlow.",
+  "author": {
+    "name": "MakeTimeFlow",
+    "url": "https://maketimeflow.com"
+  },
+  "homepage": "https://help.maketimeflow.com",
+  "repository": "https://github.com/MakeTimeFlow/flow",
+  "license": "MIT",
+  "keywords": [
+    "maketimeflow",
+    "aligned-action",
+    "planning",
+    "weekly-review",
+    "productivity",
+    "time-blocking"
+  ]
+}
