@@ -110,7 +110,8 @@ done
 TOOLS="get_temporal_context list_tasks assess_capacity check_fit create_task update_task
        time_spent_summary stalled_tasks complete_task cancel_task set_waiting_for add_followup
        move_bucket start_timer get_foundations list_stories read_story create_story update_story
-       update_story_stage update_story_dates update_values update_strengths update_relationships"
+       update_story_stage update_story_dates update_values update_strengths update_relationships
+       list_reflections create_reflection"
 SERVER="${MAKETIMEFLOW_SERVER:-$HOME/code/maketime/maketimeflow-server}"
 for t in $TOOLS; do
   grep -q "\`$t\`" "$S/references/mcp-tools.md" || { echo "tool not documented: $t"; fail=1; }

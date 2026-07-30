@@ -12,7 +12,7 @@ Installation and user-facing docs live in the [repo README](../../README.md).
 | `references/plan-my-day.md` | The daily playbook, step by step |
 | `references/weekly-wrap.md` | The weekly WRAP playbook, step by step |
 | `references/success-story-coaching.md` | Outcome-shaped story drafting across the three horizons |
-| `references/aligned-action.md` | The framework, unfilled-horizon detection, legacy-workspace migration |
+| `references/aligned-action.md` | The framework, how each foundation is load-bearing, unfilled **and stale** horizon detection, the mirror-and-correct cold start, legacy-workspace migration |
 | `references/mcp-tools.md` | Which tool to reach for, and the gotchas that bite |
 | `assets/templates/` | Starter templates carrying the `<!-- flow:template -->` sentinel that marks a horizon unfilled |
 

@@ -1,6 +1,8 @@
-# flow workspace
+# flow workspace (legacy — migration source only)
 
-Your local Aligned Action workspace. The `flow` skill reads and writes these files to plan your day and run the weekly WRAP.
+An earlier version of the `flow` skill kept your Aligned Action workspace here, in local files. **It no longer does.** Intention now lives in MakeTimeFlow itself — the horizon success stories and the foundations are read and written over the MCP, so they reach every device and every client, not just this machine.
+
+These files are kept for one purpose: if this workspace has real content in it and your MakeTimeFlow horizons are still empty, the skill offers to **migrate it up** on first run. After that, retire the folder.
 
 ## Layout
 
@@ -19,11 +21,14 @@ flow/
   experiments/              # v2: personal-experiments.md · smart-bets.md · results.csv
 ```
 
-## How flow uses it
+## What migrates where
 
-- **plan-my-day** reads `horizons/short-term.md` (primary; medium/long for context) and proposes a realistic, aligned day.
-- **weekly WRAP** holds where time actually went against `horizons/short-term.md`, then drafts next week's story and archives the old one to `horizons/archive/`.
-- **foundations** are read-if-present, so the weekly story can `[[wikilink]]` the values it serves.
+- `horizons/*.md` → the matching long / medium / short-term success story in MakeTimeFlow.
+- `foundations/values.md` → your ordered values list; `strengths.md` and `relationships.md` likewise.
+
+A file counts as filled unless it's missing or its first line is still `<!-- flow:template -->`. Nothing is migrated without you seeing the draft and saying yes, and the local files are left untouched either way.
+
+Once it's up, the foundations are not decoration: your values become the tiebreak the daily plan names out loud, and your horizons get re-met rather than left to go stale.
 
 ## Privacy
 

@@ -9,15 +9,19 @@ description: Plan the day and run the weekly WRAP the MakeTimeFlow way — readi
 
 ## The way (in brief)
 
-- Choose daily action by **alignment to the weekly success story** (the short_term story in the current stack) and the values it serves — not by what's loudest.
+- Choose daily action by **alignment to the weekly success story** (the short_term story in the current stack) — not by what's loudest.
+- **The foundations decide, and you say so.** When two candidates both fit, the **value breaks the tie and gets named out loud**. Values, strengths, and the horizon stack are the reasoning substrate here, not a preamble — `references/aligned-action.md` says how each one is load-bearing.
 - Respect a **realistic focused-work ceiling** (~4h/day). Plan to it and **leave white space**; an overfull day is a planning failure.
 - **Close every loop.** A task isn't done until its outcome is handled — chain followups and mark waiting-for so nothing silently drops.
 - Weekly, **hold where time actually went against where you intended it to go** — the gap is the lesson.
+- **Maintain the horizons; don't just set them.** A story nobody revisits guides nothing, and staleness is detectable — re-meet it, don't rewrite it.
 - Full method lives at **https://help.maketimeflow.com** — this skill is the operational summary, not a replacement. If a local methodology corpus is present on this machine, prefer it.
 
 ## Interaction posture
 
-Reads are free. **Never create or modify anything silently — draft it, get a yes, then act.** This holds for every MakeTimeFlow write: tasks, time-blocks, and every ledger write (stories, values, strengths, relationships), all of which also pass the MCP `mcp:write` consent. Two ledger-specific rules: **stories are whole-body writes** (read first, rewrite the full document, send it all back), and **committing a story is the user's explicit gesture** — never call `update_story_stage` as a side effect of writing.
+Reads are free. **Never create or modify anything silently — draft it, get a yes, then act.** This holds for every MakeTimeFlow write: tasks, time-blocks, and every ledger write (stories, values, strengths, relationships, journal reflections), all of which also pass the MCP `mcp:write` consent. Two ledger-specific rules: **stories are whole-body writes** (read first, rewrite the full document, send it all back), and **committing a story is the user's explicit gesture** — never call `update_story_stage` as a side effect of writing.
+
+**Foundations are earned, never demanded.** The skill does not run an authoring wizard and never gates the day on an empty foundation. When values are missing, the move is to **mirror and correct** — propose what the user already appears to value from their own reflections and behaviour, tentatively, and let them fix it — offered once, declinable, with a link out to the picker for anyone who'd rather not do it in chat. Their reflections are private writing: reflect them back to the user only, and check `authored_by` before quoting so you never hand an assistant's earlier words back as their own.
 
 ## Entry points
 
@@ -26,7 +30,7 @@ Reads are free. **Never create or modify anything silently — draft it, get a y
 | "plan my day" / "what should I work on" | `references/plan-my-day.md` | `/flow:plan-my-day` |
 | "weekly review" / "wrap" | `references/weekly-wrap.md` | `/flow:wrap` |
 | "write/update my success story" / "set my goals" | `references/success-story-coaching.md` | — |
-| first run / stories are empty or template | `references/aligned-action.md` (framework · unfilled detection · legacy-workspace migration) | `/flow:setup` |
+| first run / stories are empty or template | `references/aligned-action.md` (framework · unfilled detection · staleness · mirror-and-correct cold start · legacy-workspace migration) | `/flow:setup` |
 | "which MCP tool / how" | `references/mcp-tools.md` | — |
 
 The typed doors are thin routers into these same files, for users who would rather type a command than describe what they want. Routing is identical either way.

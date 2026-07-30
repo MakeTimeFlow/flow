@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Setup — is flow ready to run?
 
-Check the two things that must be true before `/flow:plan-my-day` or `/flow:wrap` can do anything useful: the MCP server is connected, and the horizons have something in them. Report both plainly, then offer the one next step that unblocks the user.
+Check the two things that must be true before `/flow:plan-my-day` or `/flow:wrap` can do anything useful — the MCP server is connected, and the horizons have something in them — then look at the foundations the daily loop reasons with. Report plainly, then offer the **one** next step that unblocks the user. Only the first two can block; the third is an offer.
 
 File paths below are relative to this skill's own directory.
 
@@ -29,7 +29,15 @@ Apply the unfilled test in `../flow/references/aligned-action.md` — a horizon 
 - **Everything unfilled and a legacy local `flow/` workspace exists** → offer the first-run migration in `aligned-action.md` instead of writing from scratch.
 - **Medium/long unfilled but weekly filled** → say so, don't block. The week can be planned; offer the quarterly and five-year later.
 
-Foundations are read-if-present. Name what's empty, but never gate the day on them.
+## 3. Are the foundations there to reason with?
+
+Values are the tiebreak the daily loop uses, so an empty values list is worth naming — **but never as a gate, and never as a task list handed to the user.**
+
+- **Values present** → say how many, and that the day's choices will name them.
+- **Values empty** → offer the **mirror-and-correct** move in `../flow/references/aligned-action.md`: you can read their recent reflections and completed work and propose two or three values for them to correct, or they can pick from the list at **https://my.maketimeflow.com/values** — `/strengths` and `/relationships` likewise. Offer once. A no ends it.
+- **Strengths / relationships empty** → mention in passing at most. They matter later (routing under depletion, relationship noticing), not on day one.
+
+Foundations also carry an age: `get_foundations` returns `values_updated_at` and friends. Years-old values are worth re-meeting, not rewriting.
 
 ## Posture
 

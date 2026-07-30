@@ -18,12 +18,22 @@ To place a task as a real timed calendar block, `create_task` needs **both** `st
 - **Planning ahead is native.** `period: "next"` addresses the upcoming draft for ANY horizon (next week, next quarter, the next five-year vision) — `create_story` to start it, `update_story` to revise it. No archiving — the server keeps history.
 - **Rollover leaves a story stranded, and that is a coaching moment.** At a quarter or vision boundary the previous story stays active while its window ends, so `list_stories` shows it with `status: "active_past_window"`. Do not plan against it and do not quietly start a replacement — `create_story` would retire theirs. Ask which they meant: extend the window (`update_story_dates`) because the quarter really did run longer, or start the new one. Writing a `period: "next"` draft ahead avoids the gap entirely, which is the WRAP habit worth building.
 - **Values are a full-list replace.** `get_foundations` first; `update_values` with everything the user keeps, most-important-first. Same read-first rule for `update_strengths` / `update_relationships` (whole-text replaces).
+- **Story age has two clocks.** `list_stories` carries `updated_at` — the row, which moves when the stage or the dates change. `read_story` carries `content_updated_at` — the **words**. Judge staleness on the words. See `aligned-action.md`.
+
+## Reflections — the private corpus (gotchas)
+
+`list_reflections` returns what the user wrote at their rituals (BeginWell, Shutdown, Weekly Planning), their journal entries, and their daily notes. It is the only record of what happened *outside* tasks and timers, and it is the evidence layer beneath foundations coaching.
+
+- **Read `authored_by` before you quote anything.** Every row says `user` or `agent`. Text an assistant recorded earlier is **not** the user's words — quoting it back as theirs is how a coaching loop starts agreeing with itself. Say "I noted last week that…" for agent rows, and quote only user rows as *their* writing.
+- **Quote sparingly, reflect back only to the user.** This is a private journal, not context to summarize outward.
+- **What's absent is absent on purpose.** No mood or energy ratings come back, and the AI reflection conversation isn't a source. Don't narrate a trend from what you can't see, and don't treat a quiet week in the corpus as a quiet week in the life.
+- **`create_reflection` writes to the journal, never onto a ritual.** It records something the system could not otherwise know — what the user said about how a week went, the evening that mattered, who drained them. Draft it, get an explicit yes, and write it **in their words**, not as a summary of your own advice. No byline: the row already records that an agent wrote it.
 
 ## Reference table — ledger (intention)
 
 | Tool | Use in flow |
 |------|-------------|
-| `get_foundations` | Values + strengths + relationships in one call, plus the canonical predefined-values catalog (name, definition, category) — the menu to offer in a values conversation. Anchor plan-my-day and story coaching; the read-first step before any foundations write. |
+| `get_foundations` | Values + strengths + relationships in one call, plus the canonical predefined-values catalog (name, definition, category) — the menu to offer in a values conversation, and the vocabulary the mirror-and-correct cold start proposes in. Anchor plan-my-day and story coaching; the read-first step before any foundations write. Also carries `values_updated_at` / `strengths_updated_at` / `relationships_updated_at`, so foundations have an age too. |
 | `list_stories` | No args = the current stack (per horizon: active story, or an in-window draft written ahead). The first intention read in both playbooks. |
 | `read_story` | Full content + watcher evaluations (quality + structural section-coverage) + `content_updated_at` (when the words last changed). Mandatory before `update_story`; the poll target after one. Read again before writing if the user may have edited in the app since — the workspace editor and this skill are two writers on one document. |
 | `create_story` | Start a horizon's FIRST story (or its first `period: "next"` draft). Refuses if one already exists — the user may have just written it in the app. |
@@ -31,6 +41,8 @@ To place a task as a real timed calendar block, `create_task` needs **both** `st
 | `update_story_stage` | The user's commit/refine/draft gesture — explicit ask only. |
 | `update_story_dates` | Fix a window the user disagrees with ("my quarter runs through March"). |
 | `update_values` / `update_strengths` / `update_relationships` | Foundations writes — full replaces, read-first. |
+| `list_reflections` | The user's own reflective writing — rituals, journal, daily notes — over a window. The evidence for mirror-and-correct, and for noticing what recurs. Read the gotchas above before quoting any of it. |
+| `create_reflection` | Record something the system could not otherwise know into the user's journal, in their words, on their explicit yes. |
 
 ## Reference table — execution
 
