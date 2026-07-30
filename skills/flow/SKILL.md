@@ -15,7 +15,7 @@ description: Plan the day, get out from under the pile, start focused work with 
 - **Everything gets a home.** Overwhelm is answered by *disposal*, not by picking harder: the ninety percent you aren't doing each get a named home, which is what actually stops the pile occupying you.
 - **Work starts with a declaration, not a timer.** What done looks like, why this now, and the if-then response to the derailment you can already predict — pre-deciding is what makes the block hold.
 - **Close every loop.** A task isn't done until its outcome is handled — chain followups and mark waiting-for so nothing silently drops.
-- Weekly, **hold where time actually went against where you intended it to go** — the gap is the lesson.
+- Weekly, **account for the week before naming its gap.** What got delivered and where the hours actually went comes first; the gap lands second, with a lever, and says whether it was a one-off or the shape of the week. The order is the intervention, not a courtesy.
 - **Maintain the horizons; don't just set them.** A story nobody revisits guides nothing, and staleness is detectable — re-meet it, don't rewrite it.
 - Full method lives at **https://help.maketimeflow.com** — this skill is the operational summary, not a replacement. If a local methodology corpus is present on this machine, prefer it.
 
