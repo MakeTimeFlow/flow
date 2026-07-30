@@ -1,6 +1,6 @@
 ---
 name: flow
-description: Plan the day and run the weekly WRAP the MakeTimeFlow way — reading and writing the Aligned Action horizons (success stories + foundations) live in MakeTimeFlow, joined to tasks, timers, and time-calculation. Use when the user says plan my day, what should I work on, weekly review, wrap, write/update my success story, set my goals, or "the MakeTimeFlow way."
+description: Plan the day, get out from under the pile, and run the weekly WRAP the MakeTimeFlow way — reading and writing the Aligned Action horizons (success stories + foundations) live in MakeTimeFlow, joined to tasks, timers, and time-calculation. Use when the user says plan my day, what should I work on, I'm drowning, there's too much, help me triage, weekly review, wrap, write/update my success story, set my goals, or "the MakeTimeFlow way."
 ---
 
 # flow — Aligned Action, live in MakeTimeFlow
@@ -12,6 +12,7 @@ description: Plan the day and run the weekly WRAP the MakeTimeFlow way — readi
 - Choose daily action by **alignment to the weekly success story** (the short_term story in the current stack) — not by what's loudest.
 - **The foundations decide, and you say so.** When two candidates both fit, the **value breaks the tie and gets named out loud**. Values, strengths, and the horizon stack are the reasoning substrate here, not a preamble — `references/aligned-action.md` says how each one is load-bearing.
 - Respect a **realistic focused-work ceiling** (~4h/day). Plan to it and **leave white space**; an overfull day is a planning failure.
+- **Everything gets a home.** Overwhelm is answered by *disposal*, not by picking harder: the ninety percent you aren't doing each get a named home, which is what actually stops the pile occupying you.
 - **Close every loop.** A task isn't done until its outcome is handled — chain followups and mark waiting-for so nothing silently drops.
 - Weekly, **hold where time actually went against where you intended it to go** — the gap is the lesson.
 - **Maintain the horizons; don't just set them.** A story nobody revisits guides nothing, and staleness is detectable — re-meet it, don't rewrite it.
@@ -27,6 +28,7 @@ Reads are free. **Never create or modify anything silently — draft it, get a y
 
 | When the user says… | Use | Typed door |
 |---------------------|-----|------------|
+| "I'm drowning" / "too much" / "I can't start" | `references/triage.md` | `/flow:triage` |
 | "plan my day" / "what should I work on" | `references/plan-my-day.md` | `/flow:plan-my-day` |
 | "weekly review" / "wrap" | `references/weekly-wrap.md` | `/flow:wrap` |
 | "write/update my success story" / "set my goals" | `references/success-story-coaching.md` | — |

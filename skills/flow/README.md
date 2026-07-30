@@ -1,6 +1,6 @@
 # flow skill — internals
 
-The umbrella skill: the Aligned Action daily loop, read and written live in MakeTimeFlow over the MCP. Claude invokes this one automatically when the user says "plan my day", "weekly review", "write my success story", and similar. The typed doors in `skills/setup`, `skills/plan-my-day`, and `skills/wrap` are thin routers into the same playbooks.
+The umbrella skill: the Aligned Action daily loop, read and written live in MakeTimeFlow over the MCP. Claude invokes this one automatically when the user says "plan my day", "I'm drowning", "weekly review", "write my success story", and similar. The typed doors in `skills/setup`, `skills/triage`, `skills/plan-my-day`, and `skills/wrap` are thin routers into the same playbooks.
 
 Installation and user-facing docs live in the [repo README](../../README.md).
 
@@ -9,6 +9,7 @@ Installation and user-facing docs live in the [repo README](../../README.md).
 | Path | What it carries |
 |------|-----------------|
 | `SKILL.md` | The way in brief, the interaction posture, and the entry-point routing table |
+| `references/triage.md` | The disposal playbook — every task gets a home |
 | `references/plan-my-day.md` | The daily playbook, step by step |
 | `references/weekly-wrap.md` | The weekly WRAP playbook, step by step |
 | `references/success-story-coaching.md` | Outcome-shaped story drafting across the three horizons |

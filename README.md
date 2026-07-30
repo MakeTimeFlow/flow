@@ -34,12 +34,17 @@ Finally, check everything is wired up:
 | Type this | What happens |
 |---|---|
 | `/flow:setup` | Checks the connection and whether your horizons are ready to plan from |
+| `/flow:triage` | Gives every task a home — today, next, parked with a name and a return date, waiting on someone, or honestly dropped |
 | `/flow:plan-my-day` | Reads this week's success story, grounds your real capacity, proposes a realistic aligned day |
 | `/flow:wrap` | Holds where your time actually went against where you meant it to go, closes stalled loops, writes next week |
 
-You can also just say it — "plan my day", "what should I work on", "let's do my weekly review", "help me write my success story" — and Claude will pick up the right playbook on its own.
+You can also just say it — "plan my day", "what should I work on", "I'm drowning", "let's do my weekly review", "help me write my success story" — and Claude will pick up the right playbook on its own.
 
 ## What it actually does
+
+**Triage** is for the days there's too much. Rather than helping you pick harder, it goes through the whole pile and gives every single task a home — today, next, later, waiting on someone, or honestly dropped. That's the part that produces the relief: an unfinished thing keeps nagging until it has a specific plan, and it stops once it has one, whether or not you've done it.
+
+It also knows the difference between *"I've decided not to do this"* and *"I've decided not to decide now."* When a big block of things is real but not for this month, it doesn't push you to kill them — it parks them together in a folder you name, with a date you'll look again, so they're out of your way without being pretended away. You approve the whole disposition at once, and it ends by starting a timer on the first real thing. Works fine on day one, with nothing set up but your tasks.
 
 **Plan my day** reads your current story stack and foundations, pulls your candidate tasks, and asks MakeTimeFlow for an *honest* capacity number rather than guessing. It proposes a few tasks that serve the week's story, fit inside real capacity, and leave white space — then offers to start the first focus timer. An overfull day is a planning failure, not ambition.
 
