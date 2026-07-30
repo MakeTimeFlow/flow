@@ -60,9 +60,13 @@ To place a task as a real timed calendar block, `create_task` needs **both** `st
 | `set_waiting_for` | `id`, `waiting_on` (optional) | Park a task as waiting; record who/what it's blocked on. |
 | `add_followup` | `original_task_id`, `title` | Chain the next action — **the original task is marked complete** and the follow-up created. |
 | `move_bucket` | `id`, `bucket` | Refile (e.g. into `@today`) — no time set; use `update_task` to schedule. |
-| `start_timer` | `kind` (`focus`/`break`), `task_id`, `duration_minutes`, `label` | Begin the intentional timer — the plan-my-day close: turns the plan into doing. |
+| `start_timer` | `kind` (`focus`/`break`), `task_id`, `duration_minutes`, `label` | Run the declaration's last step (`intentional-timer.md`) — the close of both plan-my-day and triage. Links and **marks the task started**. `label` is ignored when `task_id` is given, and a focus timer without a task **requires** one. |
+| `list_active_timers` | (none) | What's running, with `elapsed` / `remaining` / `overrun_minutes` and a `state`. Call it **before** starting — starting never stops a running timer — and on the return, where an overrun is usually the rabbit hole having happened. |
+| `stop_timer` | `timer_id` (optional) | End a block; returns `actual_minutes`. With no id it stops the only running timer and errors, listing them, when several are. |
 
-Also available, not central to the playbooks: `read_task` (with `depth`), `stop_timer`, `list_active_timers`.
+Also available, not central to the playbooks: `read_task` (with `depth`).
+
+**Two running timers double-count into `time_spent_summary`** — the one figure the WRAP trusts. That is the reason `list_active_timers` comes first.
 
 ## Every write is drafted first
 

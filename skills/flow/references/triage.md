@@ -56,7 +56,7 @@ Someone who won't cancel something is usually not being indecisive — they are 
 
 8. **Draft the whole table, take one yes, then execute.** Present every disposition together and get a single approval for the batch — then run the writes. **Never write during the sort.** Item-by-item confirmation is unreviewable at this volume and turns a five-minute relief into an interrogation. If the user changes some rows, re-present only what changed.
 
-9. **Close by starting.** Offer `start_timer` (`kind: "focus"`, the first task's `task_id`) so the session ends in motion rather than in a tidy list. Triage that ends with a clean list and no start has done half the job.
+9. **Close by starting.** Take the first task straight into a declaration — `intentional-timer.md` — so the session ends in motion rather than in a tidy list. Triage that ends with a clean list and no start has done half the job, and the person who was drowning an hour ago is exactly the one who needs the guard, not just the timer.
 
 ## Gotchas that bite here specifically
 

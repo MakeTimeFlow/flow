@@ -1,6 +1,6 @@
 # flow skill — internals
 
-The umbrella skill: the Aligned Action daily loop, read and written live in MakeTimeFlow over the MCP. Claude invokes this one automatically when the user says "plan my day", "I'm drowning", "weekly review", "write my success story", and similar. The typed doors in `skills/setup`, `skills/triage`, `skills/plan-my-day`, and `skills/wrap` are thin routers into the same playbooks.
+The umbrella skill: the Aligned Action daily loop, read and written in MakeTimeFlow over the MCP. Claude invokes this one automatically when the user says "plan my day", "I'm drowning", "weekly review", "write my success story", and similar. The typed doors in `skills/setup`, `skills/triage`, `skills/plan-my-day`, `skills/focus`, and `skills/wrap` are thin routers into the same playbooks.
 
 Installation and user-facing docs live in the [repo README](../../README.md).
 
@@ -11,6 +11,7 @@ Installation and user-facing docs live in the [repo README](../../README.md).
 | `SKILL.md` | The way in brief, the interaction posture, and the entry-point routing table |
 | `references/triage.md` | The disposal playbook — every task gets a home |
 | `references/plan-my-day.md` | The daily playbook, step by step |
+| `references/intentional-timer.md` | The focus declaration — outcome, why-now, if-then guard, environment — then the timer |
 | `references/weekly-wrap.md` | The weekly WRAP playbook, step by step |
 | `references/success-story-coaching.md` | Outcome-shaped story drafting across the three horizons |
 | `references/aligned-action.md` | The framework, how each foundation is load-bearing, unfilled **and stale** horizon detection, the mirror-and-correct cold start, legacy-workspace migration |

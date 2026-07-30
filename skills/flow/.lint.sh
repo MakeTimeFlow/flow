@@ -29,6 +29,7 @@ done
 for f in SKILL.md README.md .lint.sh \
   references/aligned-action.md references/mcp-tools.md references/success-story-coaching.md \
   references/plan-my-day.md references/weekly-wrap.md references/triage.md \
+  references/intentional-timer.md \
   assets/templates/README.md \
   assets/templates/horizons/long-term.md assets/templates/horizons/medium-term.md assets/templates/horizons/short-term.md \
   assets/templates/foundations/values.md assets/templates/foundations/strengths.md assets/templates/foundations/relationships.md; do
@@ -83,7 +84,7 @@ fi
 # 4. Frontmatter on every skill
 grep -q '^name: flow$' "$S/SKILL.md" || { echo "SKILL.md: bad name"; fail=1; }
 grep -q '^description: ' "$S/SKILL.md" || { echo "SKILL.md: no description"; fail=1; }
-for door in setup triage plan-my-day wrap; do
+for door in setup triage plan-my-day focus wrap; do
   d="skills/$door/SKILL.md"
   test -f "$d" || { echo "MISSING $d"; fail=1; continue; }
   grep -q "^name: $door$" "$d" || { echo "$d: bad name"; fail=1; }
@@ -93,7 +94,7 @@ for door in setup triage plan-my-day wrap; do
 done
 
 # 5. Every references/*.md named in SKILL.md or a door resolves
-for src in "$S/SKILL.md" skills/setup/SKILL.md skills/triage/SKILL.md skills/plan-my-day/SKILL.md skills/wrap/SKILL.md; do
+for src in "$S/SKILL.md" skills/setup/SKILL.md skills/triage/SKILL.md skills/plan-my-day/SKILL.md skills/focus/SKILL.md skills/wrap/SKILL.md; do
   test -f "$src" || continue
   for ref in $(grep -oE 'references/[a-z-]+\.md' "$src" | sort -u); do
     test -f "$S/$ref" || { echo "$src links missing $ref"; fail=1; }
@@ -111,7 +112,7 @@ TOOLS="get_temporal_context list_tasks assess_capacity check_fit create_task upd
        time_spent_summary stalled_tasks complete_task cancel_task set_waiting_for add_followup
        move_bucket start_timer get_foundations list_stories read_story create_story update_story
        update_story_stage update_story_dates update_values update_strengths update_relationships
-       list_reflections create_reflection"
+       list_reflections create_reflection stop_timer list_active_timers"
 SERVER="${MAKETIMEFLOW_SERVER:-$HOME/code/maketime/maketimeflow-server}"
 for t in $TOOLS; do
   grep -q "\`$t\`" "$S/references/mcp-tools.md" || { echo "tool not documented: $t"; fail=1; }

@@ -1,6 +1,8 @@
 # flow — the MakeTimeFlow plugin for Claude
 
-Plan your day and run your weekly review **the MakeTimeFlow way**, with Claude working from your real tasks, your real calendar, and your actual success stories — not a blank slate.
+Plan your day, get out from under the pile, start focused work you actually finish, and run your weekly review — **the MakeTimeFlow way**, with Claude working from your real tasks, your real calendar, and your actual success stories rather than a blank slate.
+
+The point isn't a tidier list. It's more of your day spent in flow.
 
 This plugin gives Claude two things: a connection to your MakeTimeFlow account, and the choreography for using it well.
 
@@ -36,9 +38,10 @@ Finally, check everything is wired up:
 | `/flow:setup` | Checks the connection and whether your horizons are ready to plan from |
 | `/flow:triage` | Gives every task a home — today, next, parked with a name and a return date, waiting on someone, or honestly dropped |
 | `/flow:plan-my-day` | Reads this week's success story, grounds your real capacity, proposes a realistic aligned day |
+| `/flow:focus` | Sets up a focus block properly — what done looks like, why it matters now, what you'll do when you get pulled off — then runs the timer |
 | `/flow:wrap` | Holds where your time actually went against where you meant it to go, closes stalled loops, writes next week |
 
-You can also just say it — "plan my day", "what should I work on", "I'm drowning", "let's do my weekly review", "help me write my success story" — and Claude will pick up the right playbook on its own.
+You can also just say it — "plan my day", "what should I work on", "I'm drowning", "I can't get started", "let's do my weekly review", "help me write my success story" — and Claude will pick up the right playbook on its own.
 
 ## What it actually does
 
@@ -46,7 +49,9 @@ You can also just say it — "plan my day", "what should I work on", "I'm drowni
 
 It also knows the difference between *"I've decided not to do this"* and *"I've decided not to decide now."* When a big block of things is real but not for this month, it doesn't push you to kill them — it parks them together in a folder you name, with a date you'll look again, so they're out of your way without being pretended away. You approve the whole disposition at once, and it ends by starting a timer on the first real thing. Works fine on day one, with nothing set up but your tasks.
 
-**Plan my day** reads your current story stack and foundations, pulls your candidate tasks, and asks MakeTimeFlow for an *honest* capacity number rather than guessing. It proposes a few tasks that serve the week's story, fit inside real capacity, and leave white space — then offers to start the first focus timer. An overfull day is a planning failure, not ambition.
+**Plan my day** reads your current story stack and foundations, pulls your candidate tasks, and asks MakeTimeFlow for an *honest* capacity number rather than guessing. It proposes a few tasks that serve the week's story, fit inside real capacity, and leave white space — then offers to start the first focus block. An overfull day is a planning failure, not ambition.
+
+**Focus** is for when you know what to do and can't make yourself start. It doesn't just run a timer — it takes a short declaration first: what done looks like, why this matters right now, and specifically what you'll do when the thing that always pulls you off pulls you off. That last part is the one with the strongest evidence behind it, and it only works if it's specific. Then the timer runs against that. Come back and ask how it went, and it'll tell you whether you ran over — and hold you to the guard you set, without the lecture.
 
 **Weekly WRAP** gets your true time totals from MakeTimeFlow, holds them against what the week's story said you'd do, and names the gap — that gap is the lesson. It walks your stalled tasks so nothing silently drops, then coaches next week's story carrying the lesson forward.
 
