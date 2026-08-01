@@ -2,6 +2,8 @@
 
 Join the week's intention to today's reality, then propose a realistic, aligned day. Tool usage and gotchas are in `mcp-tools.md`; unfilled-story detection and posture are in `aligned-action.md`.
 
+**If it's the start of the day, offer BeginWell first.** The morning ritual sets up the day more fully than a task list does: `create_task` titled `"Do begin 10m"` and `start_timer` on it opens it in the app (`mcp-tools.md`). Plan here instead when they'd rather, or afterwards.
+
 1. **Read intention.** `list_stories` (no args) → the current stack. `read_story` on the short_term story (primary), plus medium/long for context, and `get_foundations` for the **ordered** values — that order is the tiebreak order in step 6. Apply detect-and-prompt: if the weekly story is unfilled (missing from the stack, or still reads as the starter template), **stop** and offer coaching (`success-story-coaching.md`) — or first-run migration (`aligned-action.md`) — before continuing. If **values** are empty, note it and carry on: the day is never gated on foundations, and the mirror-and-correct offer rides at the close (step 9).
 
 2. **Ground time.** `get_temporal_context` → today, week boundaries, next event, working hours.

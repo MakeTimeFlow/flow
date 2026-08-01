@@ -39,10 +39,11 @@ Finally, check everything is wired up:
 | `/flow:triage` | Gives every task a home — today, next, parked with a name and a return date, waiting on someone, or honestly dropped |
 | `/flow:plan-my-day` | Reads this week's success story, grounds your real capacity, proposes a realistic aligned day |
 | `/flow:focus` | Sets up a focus block properly — what done looks like, why it matters now, what you'll do when you get pulled off — then runs the timer |
+| `/flow:shutdown` | Closes the day — stops the clock, names what you actually finished, sets tomorrow's first block, captures the reflection |
 | `/flow:wrap` | Accounts for what you actually delivered, names the gap honestly, gives everything still open a home, writes next week |
 | `/flow:loop-check` | Finds work marked done whose outcome never landed — the reply that never came, the handoff nobody picked up |
 
-You can also just say it — "plan my day", "what should I work on", "I'm drowning", "I can't get started", "have I dropped something", "let's do my weekly review", "help me write my success story" — and Claude will pick up the right playbook on its own.
+You can also just say it — "plan my day", "what should I work on", "I'm drowning", "I can't get started", "done for the day", "have I dropped something", "let's do my weekly review", "help me write my success story" — and Claude will pick up the right playbook on its own.
 
 ## What it actually does
 
@@ -55,6 +56,14 @@ It also knows the difference between *"I've decided not to do this"* and *"I've 
 Ask it to plan a day when *nothing* appeals and it does something different: rather than trying to talk you into your own list, it treats that as a sign the list is wrong for the state you're in, and looks for work that fits how you actually operate, lands in the time you really have, and still serves the week. Not a personality read — just the observation that some work is easier to *begin* than other work when you're running low.
 
 **Focus** is for when you know what to do and can't make yourself start. It doesn't just run a timer — it takes a short declaration first: what done looks like, why this matters right now, and specifically what you'll do when the thing that always pulls you off pulls you off. That last part is the one with the strongest evidence behind it, and it only works if it's specific. Then the timer runs against that. Come back and ask how it went, and it'll tell you whether you ran over — and hold you to the guard you set, without the lecture.
+
+**Shutdown** closes the day in about five minutes — and not by getting you to zero. Ending with an empty inbox isn't achievable and chasing it is why people give up on shutting down. What it goes after instead is the handful of things that still have a *hook* in you: the reply you're half-expecting, the thing you promised someone, the worry that isn't even a task. Each one gets a plan — often a block of time, and not necessarily tomorrow; Thursday is fine, and Saturday morning is fine for something personal. The plan is what lets you stop thinking about it, whether or not it's done.
+
+It also stops any timer still running, and reads back what you *actually* finished — most people end a day sure they got nothing done, and the list usually disagrees. Then it sets up tomorrow: not just the first thing you'll do, but what needs to be ready for it — the file open, the notes found, on the desk and ideally the only thing there. The first hour of the morning is the best one most people get, and it's routinely spent deciding how to spend it.
+
+Then it asks what's worth remembering. The evening that mattered, the conversation that landed, what drained you: none of that is a task or a timer, so it's the one thing your system can never work out on its own. It saves your words to your journal, in your voice.
+
+> MakeTimeFlow's own Shutdown ritual is the fuller version — it also walks your waiting-fors, your messages, and a real stop. Claude offers that first and can **start it for you**: it asks how long you want to give it, then opens the ritual in the app with a timer already running. Same for BeginWell in the morning and your weekly WRAP. If you'd rather close out in the conversation instead, what it writes is a journal entry alongside your ritual, not a replacement for it.
 
 **Weekly WRAP** starts with the account: what you actually delivered this week, and where your hours really went, from your tracked time rather than anyone's memory. Then the gap — held against what the week's story said it would be, and labelled honestly as either a one-off or the shape your weeks keep taking, because only one of those is worth changing anything over. Then everything still open gets a home, so a long list stops feeling like a threat. Then next week's story, carrying the lesson.
 

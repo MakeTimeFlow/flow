@@ -21,6 +21,28 @@ To place a task as a real timed calendar block, `create_task` needs **both** `st
 - **"Due this week" and "done this week" are different queries.** `@this_week` matches `start_at`/`deadline` — when work was *scheduled*. `completed:this_week` matches when it was *finished*. Reaching for the first to answer the second is silent and wrong.
 - **Story age has two clocks.** `list_stories` carries `updated_at` — the row, which moves when the stage or the dates change. `read_story` carries `content_updated_at` — the **words**. Judge staleness on the words. See `aligned-action.md`.
 
+## Launching a ritual in the app
+
+The rituals live in MakeTimeFlow, and you can **hand off into a real one** rather than only pointing at it. A task whose title contains a ritual keyword carries an action that opens that ritual when the task starts:
+
+| Keyword in the title | Opens |
+|---|---|
+| `shutdown` | the Shutdown ritual |
+| `wrap` (or "weekly planning" / "weekly reflection") | the Weekly Planning ritual — the WRAP |
+| `begin` (or "begin well") | the BeginWell ritual |
+
+**The handoff, in two calls:**
+
+1. **Ask how long they want to give it** — and expect an underestimate. Fifteen minutes for a Shutdown, ten for BeginWell, thirty or more for a WRAP are realistic. Naming a length up front is what stops a ritual quietly becoming a five-minute skim.
+2. `create_task` with a title carrying **the keyword and the duration** — `"Do shutdown 15m"`, `"Do wrap 30m"`, `"Do begin 10m"`. The duration sets the task's estimate.
+3. `start_timer` with that `task_id` and **no** `duration_minutes` — it inherits the estimate from the title, so the number is stated once.
+
+The app takes it from there: the timer is running, and the ritual opens. This is the closest the skill gets to feeling like one system rather than two.
+
+> **It needs the app open.** The navigation happens in the MakeTimeFlow desktop or web app, not in this conversation. If they're not in the app, you've made them a timed task that will open the ritual whenever they do start it — say that, rather than implying something is happening on screen right now.
+
+**The trap: these keywords fire on any task title.** "Begin drafting the proposal" and "Wrap up the quarter report" both match, and both would silently attach a ritual launch to an ordinary task. When creating tasks for any other purpose — triage, plan-my-day, a follow-up — **avoid opening a title with `begin`, `wrap`, or `shutdown`**. Reword it: "Draft the proposal", "Finish the quarter report".
+
 ## Reflections — the private corpus (gotchas)
 
 `list_reflections` returns what the user wrote at their rituals (BeginWell, Shutdown, Weekly Planning), their journal entries, and their daily notes. It is the only record of what happened *outside* tasks and timers, and it is the evidence layer beneath foundations coaching.

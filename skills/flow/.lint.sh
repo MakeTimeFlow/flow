@@ -29,7 +29,7 @@ done
 for f in SKILL.md README.md .lint.sh \
   references/aligned-action.md references/mcp-tools.md references/success-story-coaching.md \
   references/plan-my-day.md references/weekly-wrap.md references/triage.md \
-  references/intentional-timer.md references/loop-check.md \
+  references/intentional-timer.md references/loop-check.md references/shutdown.md \
   assets/templates/README.md \
   assets/templates/horizons/long-term.md assets/templates/horizons/medium-term.md assets/templates/horizons/short-term.md \
   assets/templates/foundations/values.md assets/templates/foundations/strengths.md assets/templates/foundations/relationships.md; do
@@ -84,7 +84,7 @@ fi
 # 4. Frontmatter on every skill
 grep -q '^name: flow$' "$S/SKILL.md" || { echo "SKILL.md: bad name"; fail=1; }
 grep -q '^description: ' "$S/SKILL.md" || { echo "SKILL.md: no description"; fail=1; }
-for door in setup triage plan-my-day focus wrap loop-check; do
+for door in setup triage plan-my-day focus wrap loop-check shutdown; do
   d="skills/$door/SKILL.md"
   test -f "$d" || { echo "MISSING $d"; fail=1; continue; }
   grep -q "^name: $door$" "$d" || { echo "$d: bad name"; fail=1; }
@@ -94,7 +94,7 @@ for door in setup triage plan-my-day focus wrap loop-check; do
 done
 
 # 5. Every references/*.md named in SKILL.md or a door resolves
-for src in "$S/SKILL.md" skills/setup/SKILL.md skills/triage/SKILL.md skills/plan-my-day/SKILL.md skills/focus/SKILL.md skills/wrap/SKILL.md skills/loop-check/SKILL.md; do
+for src in "$S/SKILL.md" skills/setup/SKILL.md skills/triage/SKILL.md skills/plan-my-day/SKILL.md skills/focus/SKILL.md skills/wrap/SKILL.md skills/loop-check/SKILL.md skills/shutdown/SKILL.md; do
   test -f "$src" || continue
   for ref in $(grep -oE 'references/[a-z-]+\.md' "$src" | sort -u); do
     test -f "$S/$ref" || { echo "$src links missing $ref"; fail=1; }

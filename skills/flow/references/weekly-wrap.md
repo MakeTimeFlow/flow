@@ -6,6 +6,8 @@ Hold the week's reality against its intention, close what's dangling, then write
 
 **So the order is the intervention.** Opening on what's missing produces a weekly guilt artifact, and a guilt artifact with no adjacent lever is churn people stop showing up for. Account first, gap second — **same data, same honesty, opposite payload**. Do not reorder these steps to "get to the important part."
 
+**Offer the app's ritual first.** MakeTimeFlow's Weekly Planning ritual is the fuller WRAP, and you can start it rather than only naming it: ask how long they want (thirty minutes or more is realistic), `create_task` titled `"Do wrap 30m"`, then `start_timer` on it with no duration — see `mcp-tools.md`. If they'd rather run it here, run it here.
+
 1. **Ground time.** `get_temporal_context` → week boundaries.
 
 2. **The account — always open here.** What actually got delivered, and where the time actually went.
