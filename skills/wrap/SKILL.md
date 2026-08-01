@@ -16,7 +16,7 @@ Run the weekly WRAP playbook. Read these first, then follow the playbook's numbe
 Four things that go wrong most often, so hold them in mind from the start:
 
 - **Open on the account, not the gap.** The order — account, gap, homes, direction — *is* the intervention. Leading with what's missing turns the WRAP into a weekly guilt artifact, which is the single thing most likely to stop someone doing it again.
-- **Get the totals from `time_spent_summary`, never by hand.** And when listing what got completed, filter on each task's own `completed_at` — the `@this_week` filter matches `start_at`/`deadline`, not when something was finished, so it reports the wrong week's work.
+- **Get the totals from `time_spent_summary`, never by hand.** And list what got done with `completed:this_week` — **not** `@this_week`, which matches when work was scheduled or due rather than when it was finished, and so reports a different week.
 - **The gap is a judgment call, not a computed rollup.** Tasks carry no stored link to horizons or values — say so plainly rather than implying a calculation. Then name whether it's a one-off or structural, because only one of those calls for changing the shape of the week.
 - **Writing next week's story does not commit it.** `update_story` with `period: "next"` writes the draft; `update_story_stage` only ever runs on the user's explicit ask.
 

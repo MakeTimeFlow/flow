@@ -11,7 +11,7 @@ Hold the week's reality against its intention, close what's dangling, then write
 2. **The account — always open here.** What actually got delivered, and where the time actually went.
 
    - `time_spent_summary` (`period: "this_week"`) → the real totals, grouped by task and by priority. **This is the figure an LLM botches by hand — trust the tool, never an estimate.**
-   - `list_tasks` with `status: "completed"`, then **filter by each row's `completed_at` to this week yourself.** The `@this_week` filter matches on `start_at`/`deadline`, *not* on when something was finished — using it here silently reports the wrong week's work.
+   - `list_tasks` with `query: "completed:this_week"` → exactly the work **finished** inside the week, bounded at both ends and resolved in the user's own zone. It already means completed work, so it needs no status filter beside it. **Never reach for `@this_week` here** — that matches when work was scheduled or *due*, not when it was done, and silently reports a different week.
    - Read it back **concretely and by name**. Not "you completed 23 tasks" — the two or three that mattered, and where the hours actually landed.
 
    **Specific beats generous.** An inflated account is worse than none, because the person was there and knows. If the week was genuinely thin, the account is short and honest, and that is still the right opening move.

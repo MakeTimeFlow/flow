@@ -18,6 +18,7 @@ To place a task as a real timed calendar block, `create_task` needs **both** `st
 - **Planning ahead is native.** `period: "next"` addresses the upcoming draft for ANY horizon (next week, next quarter, the next five-year vision) — `create_story` to start it, `update_story` to revise it. No archiving — the server keeps history.
 - **Rollover leaves a story stranded, and that is a coaching moment.** At a quarter or vision boundary the previous story stays active while its window ends, so `list_stories` shows it with `status: "active_past_window"`. Do not plan against it and do not quietly start a replacement — `create_story` would retire theirs. Ask which they meant: extend the window (`update_story_dates`) because the quarter really did run longer, or start the new one. Writing a `period: "next"` draft ahead avoids the gap entirely, which is the WRAP habit worth building.
 - **Values are a full-list replace.** `get_foundations` first; `update_values` with everything the user keeps, most-important-first. Same read-first rule for `update_strengths` / `update_relationships` (whole-text replaces).
+- **"Due this week" and "done this week" are different queries.** `@this_week` matches `start_at`/`deadline` — when work was *scheduled*. `completed:this_week` matches when it was *finished*. Reaching for the first to answer the second is silent and wrong.
 - **Story age has two clocks.** `list_stories` carries `updated_at` — the row, which moves when the stage or the dates change. `read_story` carries `content_updated_at` — the **words**. Judge staleness on the words. See `aligned-action.md`.
 
 ## Reflections — the private corpus (gotchas)
@@ -49,7 +50,7 @@ To place a task as a real timed calendar block, `create_task` needs **both** `st
 | Tool | Key params | Use in flow |
 |------|-----------|-------------|
 | `get_temporal_context` | (none) | Ground today, week boundaries, next event, working hours. First call in both playbooks. |
-| `list_tasks` | `query` (MTF filters + free text) | Candidate set, e.g. `query: "@today"`, `@next`, `priority:high`. |
+| `list_tasks` | `query` (MTF filters + free text) | Candidate set, e.g. `query: "@today"`, `@next`, `priority:high`. **`completed:<period>`** (today / yesterday / this_week / last_week / this_month / last_month) selects work *finished* in a window — the WRAP's account. **`followup:none` / `followup:has`** filter by the follow-up chain; **`followup:<task_id>`** reads how *that* task's loop was closed, including follow-ups already completed — the one thing no other query reaches. Every row carries `followup_from_task_id`, so a continuation is visible without a second call. |
 | `assess_capacity` | `window` (today / this_week / …), `start_date`, `end_date` | Honest focused-work ceiling for the window. |
 | `check_fit` | `task_ids[]` or `task_id`, `window` (default this_week) | Overcommit check for a proposed set; the single-task form judges against that task's deadline. |
 | `create_task` | `title` (required, rich MTF text), `bucket`, `notes`, `parent_task_id`, `deadline`, `start_at`, `expected_duration`, `x_factor`, `task_type`, `subtasks[]` | Create a **new** task / time-block. Pair `start_at` + `expected_duration` to block. |

@@ -40,8 +40,9 @@ Finally, check everything is wired up:
 | `/flow:plan-my-day` | Reads this week's success story, grounds your real capacity, proposes a realistic aligned day |
 | `/flow:focus` | Sets up a focus block properly — what done looks like, why it matters now, what you'll do when you get pulled off — then runs the timer |
 | `/flow:wrap` | Accounts for what you actually delivered, names the gap honestly, gives everything still open a home, writes next week |
+| `/flow:loop-check` | Finds work marked done whose outcome never landed — the reply that never came, the handoff nobody picked up |
 
-You can also just say it — "plan my day", "what should I work on", "I'm drowning", "I can't get started", "let's do my weekly review", "help me write my success story" — and Claude will pick up the right playbook on its own.
+You can also just say it — "plan my day", "what should I work on", "I'm drowning", "I can't get started", "have I dropped something", "let's do my weekly review", "help me write my success story" — and Claude will pick up the right playbook on its own.
 
 ## What it actually does
 
@@ -56,6 +57,8 @@ It also knows the difference between *"I've decided not to do this"* and *"I've 
 **Weekly WRAP** starts with the account: what you actually delivered this week, and where your hours really went, from your tracked time rather than anyone's memory. Then the gap — held against what the week's story said it would be, and labelled honestly as either a one-off or the shape your weeks keep taking, because only one of those is worth changing anything over. Then everything still open gets a home, so a long list stops feeling like a threat. Then next week's story, carrying the lesson.
 
 The order is deliberate. A review that opens on what you missed is a weekly guilt artifact, and people quietly stop doing those. This one is built to leave you with *"intense week, but good — I used my time well, and I know where I'm going."*
+
+**Loop-check** goes after the quietest failure there is: work you marked done whose *outcome* never arrived. The proposal you sent that nobody replied to, the handoff nobody picked up. Nothing about those is overdue or stalled — the task says done — so they never appear on any list. It finds the completed work with nothing carrying it forward, then uses judgment rather than handing you a list: most finished things are simply finished, and it only raises the ones whose result was supposed to land somewhere else.
 
 **Story coaching** drafts outcome-shaped success stories across all three horizons — the five-year vision, the quarterly bridge, and the live weekly one — and folds in the feedback MakeTimeFlow's own story watcher gives them.
 
