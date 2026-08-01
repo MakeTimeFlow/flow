@@ -1,6 +1,6 @@
 ---
 name: flow
-description: Plan the day, get out from under the pile, start focused work with intention, and run the weekly WRAP the MakeTimeFlow way — reading and writing the Aligned Action horizons (success stories + foundations) in MakeTimeFlow itself, joined to tasks, timers, and time-calculation. Use when the user says plan my day, what should I work on, I'm drowning, there's too much, help me triage, I can't get started, help me focus, start a focus block, check on me, weekly review, wrap, have I dropped something, did that ever get finished, write/update my success story, set my goals, or "the MakeTimeFlow way."
+description: Plan the day, get out from under the pile, start focused work with intention, and run the weekly WRAP the MakeTimeFlow way — reading and writing the Aligned Action horizons (success stories + foundations) in MakeTimeFlow itself, joined to tasks, timers, and time-calculation. Use when the user says plan my day, what should I work on, I'm drowning, there's too much, help me triage, I can't get started, help me focus, start a focus block, check on me, I want none of this today, I've got nothing, weekly review, wrap, have I dropped something, did that ever get finished, write/update my success story, set my goals, or "the MakeTimeFlow way."
 ---
 
 # flow — the Aligned Action loop, in MakeTimeFlow
@@ -13,6 +13,7 @@ description: Plan the day, get out from under the pile, start focused work with 
 - **The foundations decide, and you say so.** When two candidates both fit, the **value breaks the tie and gets named out loud**. Values, strengths, and the horizon stack are the reasoning substrate here, not a preamble — `references/aligned-action.md` says how each one is load-bearing.
 - Respect a **realistic focused-work ceiling** (~4h/day). Plan to it and **leave white space**; an overfull day is a planning failure.
 - **Everything gets a home.** Overwhelm is answered by *disposal*, not by picking harder: the ninety percent you aren't doing each get a named home, which is what actually stops the pile occupying you.
+- **Strengths route work; they never label people.** On a day when nothing appeals, the useful read is mis-assignment rather than motivation — work that fits how someone operates is easier to *begin*, which is a scheduling fact and not a claim about who they are.
 - **Work starts with a declaration, not a timer.** What done looks like, why this now, and the if-then response to the derailment you can already predict — pre-deciding is what makes the block hold.
 - **Close every loop — done is not delivered.** A task isn't done until its outcome is handled, so chain followups and mark waiting-for. The quiet failure is work marked complete whose result never arrived: nothing overdue, nothing stalled, nothing on any list.
 - Weekly, **account for the week before naming its gap.** What got delivered and where the hours actually went comes first; the gap lands second, with a lever, and says whether it was a one-off or the shape of the week. The order is the intervention, not a courtesy.
@@ -32,6 +33,7 @@ Reads are free. **Never create or modify anything silently — draft it, get a y
 |---------------------|-----|------------|
 | "I'm drowning" / "too much" / "I can't start" | `references/triage.md` | `/flow:triage` |
 | "plan my day" / "what should I work on" | `references/plan-my-day.md` | `/flow:plan-my-day` |
+| "I want none of this today" / "I've got nothing" | `references/plan-my-day.md` (the depleted day) | `/flow:plan-my-day` |
 | "I can't start" / "help me focus" / "check on me" | `references/intentional-timer.md` | `/flow:focus` |
 | "weekly review" / "wrap" | `references/weekly-wrap.md` | `/flow:wrap` |
 | "have I dropped something?" / "did that ever get finished" | `references/loop-check.md` | `/flow:loop-check` |

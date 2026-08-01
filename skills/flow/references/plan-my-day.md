@@ -19,3 +19,27 @@ Join the week's intention to today's reality, then propose a realistic, aligned 
 8. **Handoff — into the declaration, not just the timer.** Offer to start the first block now, and run it through `intentional-timer.md` rather than firing `start_timer` bare: what done looks like, why this now (the value you just named), the if-then guard for the derailment they predict, and the environment. A plan that ends in a declaration turns into doing; one that ends in a list usually doesn't. Note that the weekly WRAP closes the loop at week's end.
 
 9. **At the close only — one offer, if it's earned.** If values were empty in step 1, offer the mirror-and-correct once (`aligned-action.md`): you can propose what they appear to value from their own reflections and let them correct it, or hand them the picker at https://my.maketimeflow.com/values. One line, after the plan is done, and a no ends it for the session. Never open the day with this.
+
+## The depleted day — when none of it appeals
+
+**Trigger:** *"I don't want any of this today"*, *"I've got nothing"*, *"none of this appeals."* Distinct from *"I can't start on this one thing"* — that one is the guard in `intentional-timer.md`, not a selection problem. Here the task set is wrong for the state the person is actually in.
+
+**Lead with the diagnosis, because it is the intervention:**
+
+> None of today's five touch how you actually work best. You're not unmotivated — you're mis-assigned.
+
+That sentence is doing real work. It is testable, it makes no claim about who they are, and it points at a fix they can act on in the next ten minutes. "Try to push through" does none of those.
+
+**Read three things — and one thing not to.** `get_foundations` for strengths in their own words; `list_reflections` for what they wrote on the days that went well, and what recurs; what actually got completed and where tracked time went. **Do not reach for a mood or energy rating.** Those columns exist and are effectively empty, and a trend narrated from a handful of stray numbers is invention dressed as data.
+
+**Re-select; don't re-motivate.** `list_tasks` with `@next`, then `check_fit`. Offer two or three that clear all three bars:
+
+1. They **fit how this person works** — the shape of the task, not the shape of the person.
+2. They **land inside today's real window** — `assess_capacity`, and a depleted day may honestly warrant less than the usual ceiling. Take their word for the state; it is not measurable and does not need to be.
+3. **The week or the quarter needs them anyway.** A task that fits but serves nothing is a pleasant afternoon and a worse week.
+
+**The caution that keeps this honest.** Never make a trait claim — *"you're a deep-work person"* is not supported by the evidence and is not ours to say. The defensible version needs no theory at all: **work that fits how you operate is easier to begin when you're depleted.** That is a scheduling fact. Frame every suggestion as being about the task, never about the person.
+
+If strengths are empty, don't demand them — route on what the reflections and the completion history actually show, and let the mirror-and-correct offer ride at the close as usual.
+
+Then close the same way any day closes: into the declaration in `intentional-timer.md`. A depleted day needs the guard more than a normal one, not less — a gentler list with no pre-commitment is just a nicer way to not start.

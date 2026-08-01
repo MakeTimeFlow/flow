@@ -17,4 +17,6 @@ Two things that go wrong most often, so hold them in mind from the start:
 - **Never estimate focused-work hours by hand.** `assess_capacity` and `check_fit` exist because this is the calculation an LLM gets wrong. Honor the ~4h ceiling and leave white space.
 - **A time-block needs both `start_at` and `expected_duration`.** A start time alone will not render on the calendar.
 
+If the user says none of it appeals — *"I've got nothing today"* — use the depleted-day section at the end of the playbook rather than pushing the normal plan through. It treats that as **mis-assignment, not motivation**, and re-selects the day instead of selling it. Say nothing about the person: the defensible claim is only that work fitting how someone operates is easier to *begin*.
+
 If the MakeTimeFlow tools aren't available, run `/flow:setup` first.
