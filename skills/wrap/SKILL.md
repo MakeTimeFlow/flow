@@ -19,5 +19,6 @@ Four things that go wrong most often, so hold them in mind from the start:
 - **Get the totals from `time_spent_summary`, never by hand.** And list what got done with `completed:this_week` — **not** `@this_week`, which matches when work was scheduled or due rather than when it was finished, and so reports a different week.
 - **The gap is a judgment call, not a computed rollup.** Tasks carry no stored link to horizons or values — say so plainly rather than implying a calculation. Then name whether it's a one-off or structural, because only one of those calls for changing the shape of the week.
 - **Writing next week's story does not commit it.** `update_story` with `period: "next"` writes the draft; `update_story_stage` only ever runs on the user's explicit ask.
+- **The occasional beats stay occasional.** The playbook carries two moves — re-meeting a stale horizon, and noticing a relationship — that fire on a trigger and are skipped in silence otherwise. Running them weekly makes both meaningless and the WRAP too long to finish.
 
 If the MakeTimeFlow tools aren't available, run `/flow:setup` first.

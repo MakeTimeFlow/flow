@@ -58,6 +58,8 @@ It also knows the difference between *"I've decided not to do this"* and *"I've 
 
 The order is deliberate. A review that opens on what you missed is a weekly guilt artifact, and people quietly stop doing those. This one is built to leave you with *"intense week, but good — I used my time well, and I know where I'm going."*
 
+Every so often — not weekly — it does one more thing. If your quarterly or five-year story has gone untouched long enough to stop guiding anything, it reads it back to you and asks whether it's still true, rather than asking you to write a new one. Setting a long-term vision is easy and everyone helps you do it; keeping one alive is the part nothing else bothers with. And occasionally it'll notice a person who keeps appearing in your own reflections and simply ask about them — never a tally of hours, because the evenings that matter most are exactly the ones no tracker ever sees.
+
 **Loop-check** goes after the quietest failure there is: work you marked done whose *outcome* never arrived. The proposal you sent that nobody replied to, the handoff nobody picked up. Nothing about those is overdue or stalled — the task says done — so they never appear on any list. It finds the completed work with nothing carrying it forward, then uses judgment rather than handing you a list: most finished things are simply finished, and it only raises the ones whose result was supposed to land somewhere else.
 
 **Story coaching** drafts outcome-shaped success stories across all three horizons — the five-year vision, the quarterly bridge, and the live weekly one — and folds in the feedback MakeTimeFlow's own story watcher gives them.

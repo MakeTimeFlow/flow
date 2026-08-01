@@ -16,7 +16,8 @@ description: Plan the day, get out from under the pile, start focused work with 
 - **Work starts with a declaration, not a timer.** What done looks like, why this now, and the if-then response to the derailment you can already predict — pre-deciding is what makes the block hold.
 - **Close every loop — done is not delivered.** A task isn't done until its outcome is handled, so chain followups and mark waiting-for. The quiet failure is work marked complete whose result never arrived: nothing overdue, nothing stalled, nothing on any list.
 - Weekly, **account for the week before naming its gap.** What got delivered and where the hours actually went comes first; the gap lands second, with a lever, and says whether it was a one-off or the shape of the week. The order is the intervention, not a courtesy.
-- **Maintain the horizons; don't just set them.** A story nobody revisits guides nothing, and staleness is detectable — re-meet it, don't rewrite it.
+- **Maintain the horizons; don't just set them.** A story nobody revisits guides nothing, and staleness is detectable — re-meet it, don't rewrite it. Lots of other tools and coaching help people set a five-year vision; keeping one alive is the part nothing else does.
+- **People are noticed, never tallied.** Time with the people who matter is largely untracked by design, so any ledger of it understates exactly the relationships that matter most. Ask what you cannot see; never present inference as accounting.
 - Full method lives at **https://help.maketimeflow.com** — this skill is the operational summary, not a replacement. If a local methodology corpus is present on this machine, prefer it.
 
 ## Interaction posture
