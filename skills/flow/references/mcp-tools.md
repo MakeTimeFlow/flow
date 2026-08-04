@@ -6,9 +6,24 @@ Everything lives in MakeTimeFlow: the ledger tools carry intention (stories + fo
 
 Always ground capacity with `assess_capacity` / `check_fit` before proposing a day — **do not estimate focused-work hours by hand.** Honor the realistic ceiling (~4h of focused work per day) and **leave white space**. A day planned past capacity is a planning failure, not ambition.
 
+Committed time is the **union** of booked blocks, not their sum: two things holding the same hour cost one hour, because you can only be in one place at 2pm. `assess_capacity` reports the collision separately as `double_booked_minutes` — **mention it when it is non-zero**, since it usually means either a genuine conflict worth resolving or a calendar syncing the same event twice (which quietly makes every week look fuller than it really is).
+
 ## Time-blocking syntax (gotcha)
 
 To place a task as a real timed calendar block, `create_task` needs **both** `start_at` (ISO 8601) **and** `expected_duration` (minutes). A `start_at` *without* a duration will **not** render as a timed block. The same rule applies to `update_task`: to schedule a task that **already exists** onto the calendar, set both `start_at` and `expected_duration` on it — most of day-planning is this (scheduling existing tasks), not creating new ones. Use `x_factor` (with `start_at` + `expected_duration`) to materialize repeated sequential blocks (xBlocks) for deliberate, repeated focus. Use `task_type: "event"` for meeting-style time-commitments.
+
+## Grouping (gotcha)
+
+A **marker** draws a labelled line and **holds nothing** — tasks are never filed "under" it, and it groups only whatever happens to sit below it until the next row, which any sort or insert undoes. Reaching for a marker to gather related tasks is the most common way to produce organization that looks done and isn't.
+
+To group tasks so they travel together, give them a shared **parent** via `parent_task_id`:
+
+- **folder** — the group is pure organization and should never count as work ("Errands", "Paper feedback").
+- **project** — finishing it means something was *achieved* ("Draft the HCOMP keynote").
+
+The test is completable. When someone asks for "a section" or "a header" to organize tasks, they almost always mean a folder. Prefer a container they already have over creating a near-duplicate one.
+
+`update_task` re-parents an existing task (`parent_task_id`), and `clear_parent: true` makes it top-level — passing `parent_task_id: null` does not.
 
 ## The ledger rhythm (gotchas)
 
@@ -73,7 +88,7 @@ The app takes it from there: the timer is running, and the ritual opens. This is
 |------|-----------|-------------|
 | `get_temporal_context` | (none) | Ground today, week boundaries, next event, working hours. First call in both playbooks. |
 | `list_tasks` | `query` (MTF filters + free text) | Candidate set, e.g. `query: "@today"`, `@next`, `priority:high`. **`completed:<period>`** (today / yesterday / this_week / last_week / this_month / last_month) selects work *finished* in a window — the WRAP's account. **`followup:none` / `followup:has`** filter by the follow-up chain; **`followup:<task_id>`** reads how *that* task's loop was closed, including follow-ups already completed — the one thing no other query reaches. Every row carries `followup_from_task_id`, so a continuation is visible without a second call. |
-| `assess_capacity` | `window` (today / this_week / …), `start_date`, `end_date` | Honest focused-work ceiling for the window. |
+| `assess_capacity` | `window` (today / this_week / …), `start_date`, `end_date` | Honest focused-work ceiling for the window. Committed time is the union of booked blocks; `double_booked_minutes` reports collisions separately. |
 | `check_fit` | `task_ids[]` or `task_id`, `window` (default this_week) | Overcommit check for a proposed set; the single-task form judges against that task's deadline. |
 | `create_task` | `title` (required, rich MTF text), `bucket`, `notes`, `parent_task_id`, `deadline`, `start_at`, `expected_duration`, `x_factor`, `task_type`, `subtasks[]` | Create a **new** task / time-block. Pair `start_at` + `expected_duration` to block. |
 | `update_task` | `id` (required), plus fields to change | Edit an **existing** task: **schedule it onto the calendar** (`start_at` + `expected_duration`), reprioritize, refile, or re-parent. The primary way to time-block a task that already exists. |
