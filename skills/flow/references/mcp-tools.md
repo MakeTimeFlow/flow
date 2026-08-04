@@ -93,7 +93,7 @@ The app takes it from there: the timer is running, and the ritual opens. This is
 | `create_task` | `title` (required, rich MTF text), `bucket`, `notes`, `parent_task_id`, `deadline`, `start_at`, `expected_duration`, `x_factor`, `task_type`, `subtasks[]` | Create a **new** task / time-block. Pair `start_at` + `expected_duration` to block. |
 | `update_task` | `id` (required), plus fields to change | Edit an **existing** task: **schedule it onto the calendar** (`start_at` + `expected_duration`), reprioritize, refile, or re-parent. The primary way to time-block a task that already exists. |
 | `time_spent_summary` | `period` (default this_week) | Where time **actually** went — the WRAP outcome figure. |
-| `stalled_tasks` | `bucket` (default both), `min_age_days` | Surface avoided/abandoned/deferred for close-the-loops. |
+| `stalled_tasks` | `bucket` (default both), `min_age_days` | Surface avoided/abandoned/deferred for close-the-loops. Only scans `today`/`next` — moving something to `later` is a decision, not a stall — and anything touched, worked or completed in the last 7 days is excluded, so triage doesn't get reported back as stalling. |
 | `complete_task` / `cancel_task` | task id | Close a loop / drop it deliberately. |
 | `set_waiting_for` | `id`, `waiting_on` (optional) | Park a task as waiting; record who/what it's blocked on. |
 | `add_followup` | `original_task_id`, `title` | Chain the next action — **the original task is marked complete** and the follow-up created. |
