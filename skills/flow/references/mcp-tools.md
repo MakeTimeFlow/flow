@@ -98,11 +98,13 @@ The app takes it from there: the timer is running, and the ritual opens. This is
 | `set_waiting_for` | `id`, `waiting_on` (optional) | Park a task as waiting; record who/what it's blocked on. |
 | `add_followup` | `original_task_id`, `title` | Chain the next action — **the original task is marked complete** and the follow-up created. |
 | `move_bucket` | `id`, `bucket` | Refile (e.g. into `@today`) — no time set; use `update_task` to schedule. |
+| `read_tree` | `task_id` (optional) | The hierarchy as compact indented text — one branch, or the whole thing if you omit `task_id`. Use it over `read_task` when you want **structure**: `read_task` returns every field of every node and runs ~10x larger. Each line carries `id:N`. Re-read after anything moves; a tree you read earlier is stale. |
+| `reorder_task` | `id`, `position` (`first`/`last`/`before`/`after`), `relative_task_id`, `within` (`parent`/`bucket`) | Change where a task sits in an order — **never** what it is filed under. Two orders: `parent` is its place among siblings in the outline, `bucket` is its place in the hand-arranged today/next list. Picking the wrong one looks to the user like nothing happened. Both tasks must already share a parent (or bucket). |
 | `start_timer` | `kind` (`focus`/`break`), `task_id`, `duration_minutes`, `label` | Run the declaration's last step (`intentional-timer.md`) — the close of both plan-my-day and triage. Links and **marks the task started**. `label` is ignored when `task_id` is given, and a focus timer without a task **requires** one. |
 | `list_active_timers` | (none) | What's running, with `elapsed` / `remaining` / `overrun_minutes` and a `state`. Call it **before** starting — starting never stops a running timer — and on the return, where an overrun is usually the rabbit hole having happened. |
 | `stop_timer` | `timer_id` (optional) | End a block; returns `actual_minutes`. With no id it stops the only running timer and errors, listing them, when several are. |
 
-Also available, not central to the playbooks: `read_task` (with `depth`).
+Also available, not central to the playbooks: `read_task` (with `depth`) — the full-detail single-task read, where `read_tree` is the compact structural one.
 
 **Two running timers double-count into `time_spent_summary`** — the one figure the WRAP trusts. That is the reason `list_active_timers` comes first.
 
