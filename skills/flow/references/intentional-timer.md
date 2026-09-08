@@ -14,7 +14,7 @@ Tool usage and gotchas are in `mcp-tools.md`.
 
 3. **Take the declaration — four parts, in order.** Ask for them; don't compose them. The user's own words are what bind.
 
-   1. **What done looks like.** The *outcome*, not the activity: "the migration plan is drafted and I've sent it to Harrison", not "work on the migration". If they can't say what done looks like, the block is the wrong size or the task is really a decision.
+   1. **What done looks like.** The *outcome*, not the activity: "the migration plan is drafted and I've sent it to the team", not "work on the migration". If they can't say what done looks like, the block is the wrong size or the task is really a decision.
    2. **Why this, now.** Against a value or the week's story, named (`get_foundations`, `list_stories` if not already in hand). One sentence. This is the part nothing else in the category can do.
    3. **The rabbit-hole guard.** Ask *"what will pull you off this?"* — people know, and they answer instantly. Then get the response pre-committed, in **if-then** form: *"If I open the analytics dashboard to check one number, I write the number down and close the tab."* **Specificity is the mechanism.** "I'll try to stay focused" is not a guard and buys nothing; a named derailment with a named response is the whole effect.
    4. **The environment.** A short checklist they confirm out loud — phone out of reach, notifications off, tabs closed, door shut. Environment design beats willpower, and confirming it aloud is part of the commitment.

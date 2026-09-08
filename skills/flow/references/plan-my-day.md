@@ -22,6 +22,10 @@ Join the week's intention to today's reality, then propose a realistic, aligned 
 
 9. **At the close only — one offer, if it's earned.** If values were empty in step 1, offer the mirror-and-correct once (`aligned-action.md`): you can propose what they appear to value from their own reflections and let them correct it, or hand them the picker at https://my.maketimeflow.com/values. One line, after the plan is done, and a no ends it for the session. Never open the day with this.
 
+## What arrives on its own
+
+Before proposing anything, `read_repeating_tasks`. Its `assignment` says whether today's repeating lines arrive automatically each morning (`automatic`) and whether the week's time blocks are already placed ahead (`assign_ahead` beyond `on_the_day`). If they are, they are already in the list and on the calendar: plan *around* them, and never draft a task that duplicates a line in `todays_lines`. If assignment is manual, the lines wait for the user to press Assign in BeginWell — say so rather than assuming they exist.
+
 ## The depleted day — when none of it appeals
 
 **Trigger:** *"I don't want any of this today"*, *"I've got nothing"*, *"none of this appeals."* Distinct from *"I can't start on this one thing"* — that one is the guard in `intentional-timer.md`, not a selection problem. Here the task set is wrong for the state the person is actually in.
