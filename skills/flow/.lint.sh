@@ -114,7 +114,9 @@ TOOLS="get_temporal_context list_tasks assess_capacity check_fit create_task upd
        update_story_stage update_story_dates update_values update_strengths update_relationships
        list_reflections create_reflection stop_timer list_active_timers
        read_repeating_tasks update_repeating_tasks update_repeating_assignment
-       assign_repeating_tasks clear_repeating_blocks_ahead"
+       assign_repeating_tasks clear_repeating_blocks_ahead
+       get_ritual complete_ritual_step complete_ritual set_focus
+       list_calendars read_calendar add_to_calendar move_on_calendar"
 SERVER="${MAKETIMEFLOW_SERVER:-$HOME/code/maketime/maketimeflow-server}"
 for t in $TOOLS; do
   grep -q "\`$t\`" "$S/references/mcp-tools.md" || { echo "tool not documented: $t"; fail=1; }

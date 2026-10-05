@@ -10,7 +10,7 @@ Committed time is the **union** of booked blocks, not their sum: two things hold
 
 ## Time-blocking syntax (gotcha)
 
-To place a task as a real timed calendar block, `create_task` needs **both** `start_at` (ISO 8601) **and** `expected_duration` (minutes). A `start_at` time *without* a duration gets only a default 25-minute block. When the user names a **day but no time** ("the 30th", "next Monday"), pass `start_at` as a bare date (`"2025-03-15"`) — that makes an **all-day** task on that day in the user's time zone, not a block. Don't invent a midnight time for it. The same rule applies to `update_task`: to schedule a task that **already exists** onto the calendar, set both `start_at` and `expected_duration` on it — most of day-planning is this (scheduling existing tasks), not creating new ones. Use `x_factor` (with `start_at` + `expected_duration`) to materialize repeated sequential blocks (xBlocks) for deliberate, repeated focus. Use `task_type: "event"` for meeting-style time-commitments.
+To place a task as a real timed calendar block, `create_task` needs **both** `start_at` (ISO 8601) **and** `expected_duration` (minutes). A `start_at` time *without* a duration gets only a default 25-minute block. When the user names a **day but no time** ("the 30th", "next Monday"), pass `start_at` as a bare date (`"2025-03-15"`) — that makes an **all-day** task on that day in the user's time zone, not a block. Don't invent a midnight time for it. The same rule applies to `update_task`: to schedule a task that **already exists** onto the calendar, set both `start_at` and `expected_duration` on it — most of day-planning is this (scheduling existing tasks), not creating new ones. Use `x_factor` (with `start_at` + `expected_duration`) to materialize repeated sequential blocks (xBlocks) for deliberate, repeated focus. Use `task_type: "event"` for meeting-style time-commitments. When the user asks to **put something on their calendar**, prefer `add_to_calendar`: it is the calendar gesture, so a project gets a "Work on" block rather than the project itself being scheduled (which is what `update_task` with a `start_at` does).
 
 ## Grouping (gotcha)
 
@@ -57,6 +57,26 @@ The app takes it from there: the timer is running, and the ritual opens. This is
 > **It needs the app open.** The navigation happens in the MakeTimeFlow desktop or web app, not in this conversation. If they're not in the app, you've made them a timed task that will open the ritual whenever they do start it — say that, rather than implying something is happening on screen right now.
 
 **The trap: these keywords fire on any task title.** "Begin drafting the proposal" and "Wrap up the quarter report" both match, and both would silently attach a ritual launch to an ordinary task. When creating tasks for any other purpose — triage, plan-my-day, a follow-up — **avoid opening a title with `begin`, `wrap`, or `shutdown`**. Reword it: "Draft the proposal", "Finish the quarter report".
+
+## Reference table — rituals
+
+| Tool | Use in flow |
+|------|-------------|
+| `get_ritual` | One ritual as it stands: the steps that apply today (key, label, done), the writing saved so far, Begin Well's focus, started/complete. Read before guiding a ritual; it never creates one. |
+| `complete_ritual_step` | Tick one step by its key from `get_ritual`, as it finishes. Never changes completion. |
+| `complete_ritual` | Finish the ritual: closes its calendar block and counts it as done for reminders. Idempotent. |
+| `set_focus` | Today's focus (Begin Well's "decide on your focus"), optionally morning energy low/okay/high. Not a task highlight. |
+
+## Reference table — calendar
+
+The user's calendar is MakeTimeFlow's: their connected Google or Outlook calendars sync in as events, beside the time blocks they schedule. There is no separate calendar to look up.
+
+| Tool | Use in flow |
+|------|-------------|
+| `read_calendar` | What's on the calendar for a day, or up to 7 days from a date: each item (title, from/to in their time zone, event or task, all-day, meeting, read-only, completed) and each day's free stretches. The read for "what's on Thursday" and "am I free tomorrow afternoon". |
+| `list_calendars` | Which calendars are connected (Google, Outlook) and which one new items go to. Check it before promising a specific calendar. |
+| `add_to_calendar` | Put something on the calendar: a new event by default (a meeting, lunch), `kind: "task"` for a time block of work, or an existing task by `task_id`. A project gets a "Work on <project>" block for one sitting and stays off the calendar itself; "work on #email" makes a tag block. Optional `calendar: google` or `outlook` (connected only); otherwise their default. The reply names what went where; say it back. |
+| `move_on_calendar` | Reschedule something already on the calendar (by id from `read_calendar`), or `off_calendar: true` to take it off. A work block moves itself, never its project. Synced meetings are refused: those change with the organizer. |
 
 ## Reflections — the private corpus (gotchas)
 
