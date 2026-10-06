@@ -112,8 +112,9 @@ TOOLS="get_temporal_context list_tasks assess_capacity check_fit create_task upd
        time_spent_summary stalled_tasks complete_task cancel_task set_waiting_for add_followup
        move_bucket start_timer get_foundations list_stories read_story create_story update_story
        update_story_stage update_story_dates update_values update_strengths update_relationships
+       clear_values clear_strengths clear_relationships
        list_reflections create_reflection stop_timer list_active_timers
-       read_repeating_tasks update_repeating_tasks update_repeating_assignment
+       read_repeating_tasks update_repeating_tasks clear_repeating_tasks update_repeating_assignment
        assign_repeating_tasks clear_repeating_blocks_ahead
        get_ritual complete_ritual_step complete_ritual set_focus
        list_calendars read_calendar add_to_calendar move_on_calendar"
